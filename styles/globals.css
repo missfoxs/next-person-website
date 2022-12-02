@@ -16,16 +16,16 @@ a {
 }
 
 /* 检测到系统使用深色模式时使用的样式 */
-@media (prefers-color-scheme: dark) {
+/* 允许元素（表单，滚动条等）指示它可以轻松呈现的配色方案 */
+/* @media (prefers-color-scheme: dark) {
   html {
-    /* 允许元素（表单，滚动条等）指示它可以轻松呈现的配色方案 */
-    /* color-scheme: dark; */
+    color-scheme: dark;
   }
   body {
-    /* color: white;
-    background: black; */
+    color: white;
+    background: black;
   }
-}
+} */
 
 /* 提取的样式 */
 .header_right {

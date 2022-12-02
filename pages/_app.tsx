@@ -4,7 +4,6 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import LayoutHeader from "../components/layout-header";
 
-// TODO:最外层传递自定义参数
 export default function App({ Component, pageProps }: AppProps) {
   console.log("_apps", pageProps);
 

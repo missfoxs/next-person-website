@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "../styles/Home.module.css";
 // import banner1 from "../public/img/banner1.jpg";
 // import banner2 from "../public/img/banner2.jpg";
@@ -37,12 +38,13 @@ export default function Home() {
               aspectRatio: 16 / 10,
             }}
           >
-            <a
-              href="#"
-              className="absolute top-0 left-0 flex justify-center items-center w-full h-full opacity-0 group-hover:bg-[#026BEB] group-hover:opacity-100"
+            <Link
+              href="/[...posts]"
+              as={`/posts/1`}
+              className="absolute top-0 left-0 flex justify-center items-center w-full h-full opacity-0 group-hover:bg-[#026BEB] group-hover:opacity-100 rounded-xl"
             >
               <h2 className="text-white uppercase font-blod text-2xl">Blog</h2>
-            </a>
+            </Link>
           </div>
           <div
             className="bg-no-repeat bg-cover bg-center relative group rounded-xl w-full"
@@ -51,12 +53,13 @@ export default function Home() {
               aspectRatio: 16 / 10,
             }}
           >
-            <a
-              href="#"
-              className="absolute top-0 left-0 flex justify-center items-center w-full h-full opacity-0 group-hover:bg-[#026BEB] group-hover:opacity-100"
+            <Link
+              href="/[...posts]"
+              as={`/posts/2`}
+              className="absolute top-0 left-0 flex justify-center items-center w-full h-full opacity-0 group-hover:bg-[#026BEB] group-hover:opacity-100 rounded-xl"
             >
               <h2 className="text-white uppercase font-blod text-2xl">Blog</h2>
-            </a>
+            </Link>
           </div>
           <div
             className="bg-no-repeat bg-cover bg-center relative group rounded-xl w-full"
@@ -67,7 +70,7 @@ export default function Home() {
           >
             <a
               href="#"
-              className="absolute top-0 left-0 flex justify-center items-center w-full h-full opacity-0 group-hover:bg-[#026BEB] group-hover:opacity-100"
+              className="absolute top-0 left-0 flex justify-center items-center w-full h-full opacity-0 group-hover:bg-[#026BEB] group-hover:opacity-100 rounded-xl"
             >
               <h2 className="text-white uppercase font-blod text-2xl">Blog</h2>
             </a>
@@ -81,7 +84,7 @@ export default function Home() {
           >
             <a
               href="#"
-              className="absolute top-0 left-0 flex justify-center items-center w-full h-full opacity-0 group-hover:bg-[#026BEB] group-hover:opacity-100"
+              className="absolute top-0 left-0 flex justify-center items-center w-full h-full opacity-0 group-hover:bg-[#026BEB] group-hover:opacity-100 rounded-xl"
             >
               <h2 className="text-white uppercase font-blod text-2xl">Blog</h2>
             </a>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 export default function LayoutHeader() {
   return (
     <header className="lg:px-14 h-12 lg:h-20 text-gray-500 flex justify-between items-center px-3 border-t-8 border-black pt-2 lg:pt-0">
@@ -7,9 +8,9 @@ export default function LayoutHeader() {
         <span className="ml-4 text-2xl text-gray-900 font-bold">Ecoflow</span>
       </a>
       <nav className="flex items-center">
-        <a href="" className="header_right">
+        <Link href={"/blog"} as="blog" className="header_right">
           CLI
-        </a>
+        </Link>
         <a href="" className="header_right">
           Blog
         </a>
@@ -23,18 +24,19 @@ export default function LayoutHeader() {
           sing up
         </a>
         <span
+          className="mx-4"
           onClick={() => {
             document.documentElement.classList.add("dark");
           }}
         >
-           dark
+          dark
         </span>
         <span
           onClick={() => {
             document.documentElement.classList.remove("dark");
           }}
         >
-           light
+          light
         </span>
       </nav>
     </header>
