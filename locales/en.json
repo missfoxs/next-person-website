@@ -1,0 +1,9 @@
+{
+  "PostDetail": {
+    "title": "english title"
+  },
+  "Home": {
+    "hello": "Welcome to Next.js!<div>this is a div</div>",
+    "lastUpdated": "This example was updated {lastUpdatedRelative} ({lastUpdated, date, short})."
+  }
+}
