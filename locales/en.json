@@ -4,6 +4,10 @@
   },
   "Home": {
     "hello": "Welcome to Next.js!<div>this is a div</div>",
-    "lastUpdated": "This example was updated {lastUpdatedRelative} ({lastUpdated, date, short})."
+    "lastUpdated": "This example was updated {lastUpdatedRelative} ({lastUpdated, date, short}).",
+    "params": "我要在这里传递一些参数： {params}， {otherParams}"
+  },
+  "Index": {
+    "allBlog": "Blog"
   }
 }

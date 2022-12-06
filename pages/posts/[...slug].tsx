@@ -29,7 +29,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
   const { params, query, locale, locales } = context;
   console.log("locale", locale, locales);
   const messages = (await import(`../../locales/${locale}.json`))?.default;
-  console.log("messages", JSON.stringify(messages));
+  // console.log("messages", JSON.stringify(messages));
 
   // const id = params?.posts?.[1]; //文件夹路由动态 {posts: ['posts', 1]}
   const { slug } = params as any;
