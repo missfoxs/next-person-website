@@ -34,20 +34,6 @@ export const getServerSideProps: GetServerSideProps = async content => {
   );
 
   const blogList = await getStoreBlogData();
-  // 因为文件加密，这里读取到的都是乱码，先手动写点数据吧
-  while (blogList.length) {
-    blogList.pop();
-  }
-  blogList.push({
-    id: "ssg-ssr",
-    date: "2022-12-6",
-    title: "When to Use Static Generation v.s. Server-side Rendering",
-  });
-  blogList.push({
-    id: "pre-rendering",
-    date: "2022-12-6",
-    title: "Two Forms of Pre-rendering",
-  });
 
   return {
     props: {

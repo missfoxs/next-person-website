@@ -7,11 +7,12 @@ const BlogDetail = ({ blogData }: any) => {
   const { id, title, date, contentHtml } = blogData;
   return (
     <div className="max-w-screen-md mx-auto my-8">
-      <h2>{id}</h2>
-      <h1 className="text-5xl">{title}</h1>
-      {/* <div className="text-sm">{date}</div> */}
-      <Date dateString={'2020-01-01'} />
-      <div dangerouslySetInnerHTML={{ __html: contentHtml }}></div>
+      <h1 className="text-5xl pb-10">{title}</h1>
+      <Date dateString={date} />
+      <div
+        style={{ lineHeight: 2.5 }}
+        dangerouslySetInnerHTML={{ __html: contentHtml }}
+      ></div>
     </div>
   );
 };
