@@ -6,8 +6,6 @@ import Link from "next/link";
 
 export default function Index({ blogList }: any) {
   const t = useTranslations("Index");
-  console.log("blogList", blogList);
-
   return (
     <main className="max-w-screen-md px-4 pt-16 mx-auto">
       <h1 className="text-5xl font-bold">{t("allBlog")}</h1>

@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   i18n: {
-    locales: ["en", "zh", "fr"], // 所有支持的语言
+    locales: ["en", "zh"], // 所有支持的语言
     defaultLocale: "zh",
   },
 };

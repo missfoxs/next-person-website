@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     // 全局的模式切换
-    <div className="bg-white dark:bg-black">
+    <div className="bg-white h-full text-black dark:bg-black dark:text-white">
       {/* 这里的message是在每一个页面中获取语言包后传给页面组件的 */}
       <NextIntlProvider messages={pageProps.messages}>
         <Head>
