@@ -12,7 +12,7 @@ export default function LayoutHeader() {
     <header className="lg:px-14 h-12 lg:h-20 flex justify-between items-center px-3 border-t-8 border-black pt-2 lg:pt-0">
       <Link href="/" className="flex items-center flex-shrink-0">
         <Image src="/icon.svg" alt="icon" width={28} height={28} />
-        <span className="ml-4 text-2xl font-bold">Ecoflow</span>
+        <span className="ml-4 text-2xl font-bold">Nico and Ekko</span>
       </Link>
       <nav className="flex items-center">
         {/* Link 和 a标签的区别，没有使用强制刷新页面，否则网站的亮暗模式会失效 */}
