@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -5,7 +6,12 @@ import SwitchLanage from "../switch-lanage";
 import SwitchTheme from "../switch-theme";
 
 export default function LayoutHeader() {
-  const { route, locale, locales } = useRouter();
+  // const { route, locale, locales, push } = useRouter();
+  const routeInfo = useRouter();
+  const { asPath, push, locale, locales } = routeInfo;
+  console.log("route", routeInfo);
+  const t = useTranslations("LayoutHeader");
+
   const otherLocal = locales?.find(item => item !== locale);
 
   return (
@@ -17,7 +23,10 @@ export default function LayoutHeader() {
       <nav className="flex items-center">
         {/* Link 和 a标签的区别，没有使用强制刷新页面，否则网站的亮暗模式会失效 */}
         <Link href="/" className="header_right">
-          Blog
+          {t("nav1")}
+        </Link>
+        <Link href="/animation" className="header_right">
+          {t("nav2")}
         </Link>
         <Link
           href="/"
@@ -27,9 +36,13 @@ export default function LayoutHeader() {
         </Link>
         <SwitchTheme />
         {/* 这里应该有编程式的实现吧 */}
-        <Link href={route} locale={otherLocal}>
+        {/* 如果是动态的页面，这里不能用router要用asPath */}
+        <Link href={asPath} locale={otherLocal}>
           <SwitchLanage />
         </Link>
+        {/* <span onClick={() => push(otherLocal)}>
+          <SwitchLanage />
+        </span> */}
       </nav>
     </header>
   );

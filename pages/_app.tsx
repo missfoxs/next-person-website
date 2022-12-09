@@ -4,9 +4,10 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import LayoutHeader from "../components/layout-header";
 import { NextIntlProvider } from "next-intl";
+import { useRouter } from "next/router";
 
 export default function App({ Component, pageProps }: AppProps) {
-  console.log("_apps", pageProps);
+  const { route } = useRouter();
 
   return (
     // 全局的模式切换
@@ -20,7 +21,7 @@ export default function App({ Component, pageProps }: AppProps) {
             crossOrigin="true"
           />
         </Head>
-        <LayoutHeader />
+        {!route.startsWith("/animation") && <LayoutHeader />}
         <Component {...pageProps} />
       </NextIntlProvider>
     </div>
