@@ -8,6 +8,6 @@
     "params": "我要在这里传递一些参数： {params}， {otherParams}"
   },
   "Index": {
-    "allBlog": "Blog-1"
+    "allBlog": "blog"
   }
 }

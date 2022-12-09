@@ -5,7 +5,11 @@ import SwitchLanage from "../switch-lanage";
 import SwitchTheme from "../switch-theme";
 
 export default function LayoutHeader() {
-  const { route, locale, locales } = useRouter();
+  // const { route, locale, locales, push } = useRouter();
+  const routeInfo = useRouter();
+  const { asPath, push, locale, locales } = routeInfo;
+  console.log("route", routeInfo);
+
   const otherLocal = locales?.find(item => item !== locale);
 
   return (
@@ -27,9 +31,13 @@ export default function LayoutHeader() {
         </Link>
         <SwitchTheme />
         {/* 这里应该有编程式的实现吧 */}
-        <Link href={route} locale={otherLocal}>
+        {/* 如果是动态的页面，这里不能用router要用asPath */}
+        <Link href={asPath} locale={otherLocal}>
           <SwitchLanage />
         </Link>
+        {/* <span onClick={() => push(otherLocal)}>
+          <SwitchLanage />
+        </span> */}
       </nav>
     </header>
   );
