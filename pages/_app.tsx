@@ -7,9 +7,7 @@ import { NextIntlProvider } from "next-intl";
 import { useRouter } from "next/router";
 
 export default function App({ Component, pageProps }: AppProps) {
-  console.log("_apps", pageProps);
   const { route } = useRouter();
-  console.log("route1", route);
 
   return (
     // 全局的模式切换

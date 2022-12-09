@@ -60,7 +60,7 @@ export default function DaftPunk() {
   return (
     <Page>
       <Canvas>
-        {[...Array(20)].map((item, index) => (
+        {Array.from({ length: 20 }, (v, k) => k).map((item, index) => (
           <RichColorCircle
             key={item}
             index={index + 1}

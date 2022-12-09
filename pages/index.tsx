@@ -26,16 +26,22 @@ export default function Index({ blogList }: any) {
 
 export const getServerSideProps: GetServerSideProps = async content => {
   const { locale } = content;
-  const messages = _pick(
-    (await import(`../locales/${locale}.json`))?.default,
+  const IndexMessages = _pick(
+    (await import(`../locales/index/${locale}.json`))?.default,
     "Index"
   );
-
+  const headerMessages = _pick(
+    (await import(`../locales/common/${locale}.json`))?.default,
+    "LayoutHeader"
+  );
   const blogList = await getStoreBlogData();
 
   return {
     props: {
-      messages,
+      messages: {
+        ...headerMessages,
+        ...IndexMessages,
+      },
       blogList,
     },
   };
