@@ -1,26 +1,25 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    height: 100vh;
 }
 /* 根结点有一个__next的div */
 #__next {
-  height: 100%;
+    height: 100%;
 }
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 ::selection {
-  background-color: yellowgreen;
+    background-color: yellowgreen;
 }
 
 /* 检测到系统使用深色模式时使用的样式 */
@@ -37,5 +36,5 @@ a {
 
 /* 提取的样式 */
 .header_right {
-  @apply hidden lg:inline ml-12 leading-5 opacity-60 hover:underline focus:underline;
+    @apply hidden lg:inline ml-12 leading-5 opacity-60 hover:underline focus:underline;
 }
