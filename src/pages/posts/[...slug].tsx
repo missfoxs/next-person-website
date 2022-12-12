@@ -6,13 +6,13 @@ export default function PostDetail({ id, blog, messages }: any) {
   const router = useRouter();
   // 在这里也可以获取路由信息，完成客户端渲染
   console.log(router, router.query);
-  const t = useTranslations('PostDetail');
-  
+  const t = useTranslations("Blog");
+
   return (
     <div>
       post detail id: {id}
       <p>{blog}</p>
-      <p>{t("title")}</p>
+      <p>{t("blog")}</p>
     </div>
   );
 }
@@ -28,10 +28,7 @@ function getBlogDetail(id: string) {
 export const getServerSideProps: GetServerSideProps = async context => {
   const { params, query, locale, locales } = context;
   console.log("locale", locale, locales);
-  const messages = (await import(`../../locales/${locale}.json`))?.default;
-  // console.log("messages", JSON.stringify(messages));
-
-  // const id = params?.posts?.[1]; //文件夹路由动态 {posts: ['posts', 1]}
+  const messages = (await import(`../../locales/blog/${locale}.json`))?.default;
   const { slug } = params as any;
   const blog = await getBlogDetail(slug);
   console.log("params,", context.params, query, "blog content: ", blog);
@@ -40,7 +37,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     props: {
       id: slug,
       blog,
-      messages
+      messages,
     },
   };
 };

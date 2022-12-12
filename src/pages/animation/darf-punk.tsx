@@ -1,4 +1,4 @@
-import styled, { ThemeProvider } from "styled-components";
+import styled from "styled-components";
 import DaftPunkBg from "./components/darf-punk-bg";
 const Page = styled.div`
   height: 100%;
@@ -16,7 +16,16 @@ const Canvas = styled.div`
   justify-content: center;
 `;
 
-const RichColorCircle = styled.div`
+type RichColorCircleProps = {
+  size: number;
+  leftPosition: number;
+  topPosition: number;
+  blur: number;
+  delay: number;
+  index: number;
+};
+
+const RichColorCircle = styled.div<RichColorCircleProps>`
   @keyframes bubble {
     0% {
       transform: translate(0, -80%);

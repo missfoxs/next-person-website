@@ -12,8 +12,7 @@ import { parseISO } from "date-fns";
 // import banner4 from "../public/img/banner4.jpg";
 
 export default function Home() {
-  const t = useTranslations("Home");
-  const { locale } = useRouter();
+  const t = useTranslations("Blog");
   const lastUpdated = parseISO("2021-12-23T10:04:45.567Z");
   const intl = useIntl();
   return (
@@ -31,12 +30,12 @@ export default function Home() {
 
       {/* 测试t.rich */}
       <h1>
-        {t.rich("hello", {
+        {/* {t.rich("hello", {
           locale,
           div: (children: any) => (
             <span style={{ color: "red" }}>{children}</span>
           ),
-        })}
+        })} */}
       </h1>
       {/* 测试多语言传参 */}
       {/* <h2>
@@ -46,10 +45,10 @@ export default function Home() {
         })}
       </h2> */}
       <h3>
-        {t("params", {
+        {/* {t("params", {
           params: "这就是参数1",
           otherParams: '其他的参数'
-        })}
+        })} */}
       </h3>
 
       <div className="flex flex-col justify-center items-center md:flex-row my2 mx-auto md:pb-28 xl:my-8 xl:mx-32 2xl:my-8 2xl:mx-auto 2xl:w-[80rem]">
@@ -139,7 +138,7 @@ export default function Home() {
 export async function getStaticProps({ locale }: GetStaticPropsContext) {
   return {
     props: {
-      messages: (await import(`../locales/${locale}.json`)).default,
+      messages: (await import(`../locales/blog/${locale}.json`)).default,
       // now: new Date().getTime()  // 没太看懂这个是啥意思
     },
   };

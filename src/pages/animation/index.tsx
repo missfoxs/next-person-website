@@ -4,6 +4,7 @@ import { Normalize } from "styled-normalize";
 import DarfPunk from "./darf-punk";
 
 const darkTheme = {
+  borderRadius: "8px",
   main: {
     backgroundColor: "black",
     color: "white",
