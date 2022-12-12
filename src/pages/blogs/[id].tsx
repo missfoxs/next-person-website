@@ -1,6 +1,6 @@
 import { GetServerSideProps } from "next";
-import Date from "../../components/date";
-import { getBlogDataById } from "../../lib/blog";
+import Date from "@/components/date";
+import { getBlogDataById } from "@/lib/blog";
 import _pick from "lodash-es/pick";
 import { useTranslations } from "next-intl";
 

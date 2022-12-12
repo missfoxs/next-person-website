@@ -4,7 +4,7 @@ import matter from "gray-matter";
 import { remark } from "remark";
 import remarkHtml from "remark-html";
 
-const blogsDirectory = path.join(process.cwd(), "data");
+const blogsDirectory = path.join(process.cwd(), "src/data");
 
 export function getStoreBlogData() {
   const fileNames = fs.readdirSync(blogsDirectory);
